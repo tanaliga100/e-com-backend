@@ -15,11 +15,35 @@ const register = async (req, res) => {
   const user = await User.create({ name, email, password, role });
   const tokenUser = { name: user.name, userId: user._id, role: user.role };
   attachCookiesToResponse({ res, user: tokenUser });
-  res.status(StatusCodes.CREATED).json({ user: tokenUser });
+  res
+    .status(StatusCodes.CREATED)
+    .json({ user: tokenUser, status: "User Registered" });
 };
 
 const login = async (req, res) => {
-  res.send("login user");
+  // login route
+  // check if has email and password : return 400
+  // find user : return 400
+  // check password if match else return no match
+  // if everything correct, atatch cookies
+  // and send back the same response
+  const { email, password } = req.body;
+  if (!email || !password) {
+    throw new CustomError.BadRequestError(`Please provide email and password`);
+  }
+  const user = await User.findOne({ email });
+  if (!user) {
+    throw new CustomError.UnauthenticatedError(`Invalid credentials`);
+  }
+  const isPasswordCorrect = await user.comparePassword(password);
+  if (!isPasswordCorrect) {
+    throw new CustomError.UnauthenticatedError(`Invalid Password`);
+  }
+  const tokenUser = { name: user.name, userId: user._id, role: user.role };
+  attachCookiesToResponse({ res, user: tokenUser });
+  res
+    .status(StatusCodes.OK)
+    .json({ user: tokenUser, status: "Login Successful" });
 };
 
 const logout = async (req, res) => {
