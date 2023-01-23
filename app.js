@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const authRouter = require("./routes/authRoutes");
-const authRouter2 = require("./routes/authRoutes2");
+// const authRouter2 = require("./routes/authRoutes2");
 // PACKAGE INSTANCE
 const app = express();
 require("dotenv").config();
@@ -15,13 +15,13 @@ require("express-async-errors");
 // TOP MIDDLEWARES
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(cookieParser());
+app.use(cookieParser(process.env.JWT_SECRET));
 // ROUTES
 app.get("/api/v1", (req, res) => {
-  console.log("reqCookies", req.cookies);
+  console.log("reqCookies", req.signedCookies);
   res.send("e commerce-api");
 });
-app.use("/api/v1/auth", authRouter2);
+app.use("/api/v1/auth", authRouter);
 // BOTTOM MIDDLEWARES
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
