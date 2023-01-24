@@ -1,7 +1,11 @@
 const User = require("../models/User");
 const { StatusCodes } = require("http-status-codes");
 const CustomError = require("../errors/index");
-const { attachCookiesToResponse, createTokenUser } = require("../utils");
+const {
+  attachCookiesToResponse,
+  createTokenUser,
+  checkPermissions,
+} = require("../utils");
 
 //  GET ALL USERS
 const getAllUsers = async (req, res) => {
@@ -16,6 +20,7 @@ const getSingleUser = async (req, res) => {
   if (!user) {
     throw new CustomError.NotFoundError(`No user with id ${userId}`);
   }
+  checkPermissions(req.user, user._id);
   res.status(StatusCodes.OK).json({ user });
 };
 
@@ -23,7 +28,7 @@ const getSingleUser = async (req, res) => {
 const showCurrentUser = async (req, res) => {
   res
     .status(StatusCodes.OK)
-    .json({ user: req.user, msg: `User is ${req.user.name}` });
+    .json({ user: req.user, msg: `User is : ${req.user.name.toUpperCase()}` });
 };
 
 // UPDATE USER CREDENTIALS
