@@ -16,7 +16,7 @@ require("dotenv").config();
 require("express-async-errors");
 // TOP MIDDLEWARES
 app.use(express.json());
-app.use(morgan("dev"));
+app.use(morgan("tiny"));
 app.use(cookieParser(process.env.JWT_SECRET));
 // ROUTES
 app.get("/api/v1", (req, res) => {
