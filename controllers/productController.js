@@ -52,7 +52,8 @@ const deleteProduct = async (req, res) => {
 };
 
 const uploadImage = async (req, res) => {
-  res.send("Product Uploaded");
+  console.log(req.files);
+  if (!req.files) res.send("Product Uploaded");
 };
 
 module.exports = {

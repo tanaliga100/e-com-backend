@@ -3,6 +3,7 @@ const express = require("express");
 const connectDB = require("./db/connect");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
+const fileUpload = require("express-fileupload");
 // IMPORTS
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
@@ -19,6 +20,8 @@ require("express-async-errors");
 app.use(express.json());
 app.use(morgan("tiny"));
 app.use(cookieParser(process.env.JWT_SECRET));
+app.use(express.static("./public"));
+app.use(fileUpload());
 // ROUTES
 app.get("/api/v1", (req, res) => {
   console.log("reqCookies", req.signedCookies);
