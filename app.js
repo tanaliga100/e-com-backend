@@ -7,6 +7,8 @@ const cookieParser = require("cookie-parser");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const authRouter = require("./routes/authRoutes");
+const userRouter = require("./routes/userRoutes");
+
 // const authRouter2 = require("./routes/authRoutes2");
 // PACKAGE INSTANCE
 const app = express();
@@ -22,6 +24,8 @@ app.get("/api/v1", (req, res) => {
   res.send("e commerce-api");
 });
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/users", userRouter);
+
 // BOTTOM MIDDLEWARES
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
