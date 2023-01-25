@@ -8,6 +8,7 @@ const {
   deleteProduct,
   uploadImage,
 } = require("../controllers/productController");
+
 const {
   authenticateUser,
   authorizePermissions,

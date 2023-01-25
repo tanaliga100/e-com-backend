@@ -53,29 +53,28 @@ const deleteProduct = async (req, res) => {
 };
 
 const uploadImage = async (req, res) => {
+  console.log(req.files);
   if (!req.files) {
-    throw new CustomError.BadRequestError(`No File Upload`);
+    throw new CustomError.BadRequestError(`No file uploaded...`);
   }
   const prodImage = req.files.image;
-  console.log(prodImage);
-
   if (!prodImage.mimetype.startsWith("image")) {
-    throw new CustomError.BadRequestError("Please Upload Image");
+    throw new CustomError.BadRequestError(`Image only is required`);
   }
   const maxSize = 1080 * 1080;
-  if (prodImage.size > maxSize) {
+  if (prodImage.size > req.maxSize) {
     throw new CustomError.BadRequestError(
       `Please Upload image size lower than ${maxSize}MB`
     );
   }
   const imagePath = path.join(
     __dirname,
-    "../public/uploads." + `${prodImage.name}`
+    "../public/uploads/" + `${prodImage.name}`
   );
   await prodImage.mv(imagePath);
   res.status(StatusCodes.OK).json({
-    msg: "Image Uploaded Successfully",
-    image: `/uploads/${prodImage.name}`,
+    msg: "Successfully Uploaded",
+    image: `./uploads/${prodImage.name}`,
   });
 };
 
