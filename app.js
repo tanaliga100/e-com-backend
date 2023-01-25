@@ -32,7 +32,7 @@ app.get("/api/v1", (req, res) => {
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/products", productsRouter);
-app.use("/api/v1/products", reviewRouter);
+app.use("/api/v1/reviews", reviewRouter);
 
 // BOTTOM MIDDLEWARES
 app.use(notFoundMiddleware);
