@@ -10,7 +10,10 @@ const createProduct = async (req, res) => {
 };
 
 const getAllProducts = async (req, res) => {
-  const products = await Product.find({});
+  const products = await Product.find({}).populate({
+    path: "user",
+    select: "name email",
+  });
   res
     .status(StatusCodes.OK)
     .json({ count: products.length, msg: "All Products", products });
