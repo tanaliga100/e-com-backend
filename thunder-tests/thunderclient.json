@@ -738,5 +738,75 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "d699ee53-d8e6-415d-92d0-9f1e3dc22dc7",
+    "colId": "bacfaece-6575-44c9-aabf-b21bc3f38bbc",
+    "containerId": "185a4a43-903e-4def-b9d4-c0c1ee4714e7",
+    "name": "CREATE_ORDER",
+    "url": "{{URL}}/orders",
+    "method": "POST",
+    "sortNum": 100000,
+    "created": "2023-01-25T20:51:42.120Z",
+    "modified": "2023-01-25T20:51:57.796Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "7a6e4853-addb-42a5-ab53-f8dba90dc4a4",
+    "colId": "bacfaece-6575-44c9-aabf-b21bc3f38bbc",
+    "containerId": "185a4a43-903e-4def-b9d4-c0c1ee4714e7",
+    "name": "GET_ALL_ORDERS",
+    "url": "{{URL}}/orders",
+    "method": "GET",
+    "sortNum": 110000,
+    "created": "2023-01-25T20:52:07.378Z",
+    "modified": "2023-01-25T20:52:36.299Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c8c4ee76-7a06-44ad-a6b0-0b84c13bb9c5",
+    "colId": "bacfaece-6575-44c9-aabf-b21bc3f38bbc",
+    "containerId": "185a4a43-903e-4def-b9d4-c0c1ee4714e7",
+    "name": "GET_SINGLE_ORDER",
+    "url": "{{URL}}/orders/123",
+    "method": "GET",
+    "sortNum": 120000,
+    "created": "2023-01-25T20:53:33.757Z",
+    "modified": "2023-01-25T20:53:59.852Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "491cfad6-a989-4f03-86e4-a0a524ed3338",
+    "colId": "bacfaece-6575-44c9-aabf-b21bc3f38bbc",
+    "containerId": "185a4a43-903e-4def-b9d4-c0c1ee4714e7",
+    "name": "UPDATE_ORDER ",
+    "url": "{{URL}}/orders/123",
+    "method": "PATCH",
+    "sortNum": 130000,
+    "created": "2023-01-25T20:54:20.459Z",
+    "modified": "2023-01-25T20:54:31.543Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "9005e94f-b861-4fc2-a755-572ca1d19af7",
+    "colId": "bacfaece-6575-44c9-aabf-b21bc3f38bbc",
+    "containerId": "185a4a43-903e-4def-b9d4-c0c1ee4714e7",
+    "name": "SHOW_CURRENT_USER_ORDERS",
+    "url": "{{URL}}/orders/showAllMyOrders",
+    "method": "GET",
+    "sortNum": 140000,
+    "created": "2023-01-25T20:54:52.563Z",
+    "modified": "2023-01-25T20:57:34.714Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
