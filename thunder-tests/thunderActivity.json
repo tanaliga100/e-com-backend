@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "431f2d14-f743-4ca2-90a2-311b16c8ae41",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.thunderclient.com/welcome",
+    "url": "https://www.thunderclient.com/welcome",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-25T05:46:01.656Z",
+    "modified": "2023-01-25T05:46:01.656Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

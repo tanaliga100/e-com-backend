@@ -56,7 +56,6 @@ const showCurrentUser = async (req, res) => {
 
 // update with pre hook
 const updateUser = async (req, res) => {
-  console.log("req", req.body);
   if (!req.body.email || !req.body.name) {
     throw new CustomError.BadRequestError(
       "Email or Name is missing.. provide both values"
@@ -78,7 +77,6 @@ const updateUser = async (req, res) => {
 
 // UPDATE USER PASSWORD
 const updateUserPassword = async (req, res) => {
-  console.log("req", req.body);
   const { oldPassword, newPassword } = req.body;
   if (!oldPassword || !newPassword) {
     throw new CustomError.BadRequestError(`Please provide both values`);

@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "5c301ce5-4c6f-42fc-840b-ad9b8150b3dd",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -2,
+    "created": "2023-01-25T05:49:26.240Z",
+    "modified": "2023-01-25T05:49:26.240Z",
+    "data": [
+      {
+        "name": "URL",
+        "value": "localhost:5000/api/v1"
+      }
+    ]
+  },
+  {
+    "_id": "3e20f6f4-6ccb-4375-8c05-640f0b81096c",
+    "name": "(Local Env)",
+    "default": false,
+    "global": true,
+    "local": true,
+    "sortNum": -1,
+    "created": "2023-01-25T05:50:00.436Z",
+    "modified": "2023-01-25T05:50:00.436Z",
+    "data": []
+  },
+  {
+    "_id": "7d79f18f-6525-41a7-a3ff-550c0b9ba394",
+    "name": "E-COM",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-01-25T05:50:36.165Z",
+    "modified": "2023-01-25T05:50:36.165Z",
+    "data": [
+      {
+        "name": "URL",
+        "value": "localhost:5000/api/v1"
+      }
+    ]
+  }
+]
