@@ -552,12 +552,12 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-01-25T07:01:28.658Z",
-    "modified": "2023-01-25T08:44:59.510Z",
+    "modified": "2023-01-25T20:09:17.142Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"name\": \"PRODUCT_1\",\n    \"price\": 109999,\n    \"image\": \"https://dl.airtable.com/.attachmentThumbnails/0be1af59cf889899b5c9abb1e4db38a4/d631ac52\",\n    \"colors\": [\"#000\", \"#ffb900\"],\n    \"company\": \"Liddy\",\n    \"description\": \"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge\",\n    \"category\": \"Kitchen\"\n  }",
+      "raw": "{\n    \"name\": \"PRODUCT_2\",\n    \"price\": 109999,\n    \"image\": \"https://dl.airtable.com/.attachmentThumbnails/0be1af59cf889899b5c9abb1e4db38a4/d631ac52\",\n    \"colors\": [\"#000\", \"#ffb900\"],\n    \"company\": \"Liddy\",\n    \"description\": \"Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge\",\n    \"category\": \"Kitchen\"\n  }",
       "form": []
     },
     "tests": []
@@ -672,12 +672,12 @@
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-01-25T07:14:44.313Z",
-    "modified": "2023-01-25T09:46:58.726Z",
+    "modified": "2023-01-25T20:11:54.744Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"product\":\"63d0ec0be6df6197f1edea3f\",\n  \"rating\":4,\n  \"title\":\"VERY VERY GOOD   \",\n  \"comment\":\"It was a nice product. Ill order again\"\n}",
+      "raw": "{\n  \"product\":\"63d0ec0be6df6197f1edea3f\",\n  \"rating\":2,\n  \"title\":\"VERY VERY GOOD   \",\n  \"comment\":\"It was a nice product. Ill order again\"\n}",
       "form": []
     },
     "tests": []
