@@ -439,7 +439,7 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-01-25T05:56:02.853Z",
-    "modified": "2023-01-25T08:47:20.239Z",
+    "modified": "2023-01-25T09:38:21.386Z",
     "headers": [],
     "params": [],
     "body": {
@@ -672,12 +672,12 @@
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-01-25T07:14:44.313Z",
-    "modified": "2023-01-25T08:47:31.203Z",
+    "modified": "2023-01-25T09:46:58.726Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"product\":\"63d0ec0be6df6197f1edea3f\",\n  \"rating\":5,\n  \"title\":\"Very good product number   \",\n  \"comment\":\"It was a nice product. Ill order again\"\n}",
+      "raw": "{\n  \"product\":\"63d0ec0be6df6197f1edea3f\",\n  \"rating\":4,\n  \"title\":\"VERY VERY GOOD   \",\n  \"comment\":\"It was a nice product. Ill order again\"\n}",
       "form": []
     },
     "tests": []
@@ -706,16 +706,16 @@
     "colId": "bacfaece-6575-44c9-aabf-b21bc3f38bbc",
     "containerId": "8ad85300-449c-4411-8a1c-e5e6f163b802",
     "name": "UPDATE_REVIEW ",
-    "url": "{{URL}}/reviews/63d0d8af86a3ad913377515c",
+    "url": "{{URL}}/reviews/63d0ec6cb3ddde8409b3b0ba",
     "method": "PATCH",
     "sortNum": 60000,
     "created": "2023-01-25T07:29:30.590Z",
-    "modified": "2023-01-25T08:39:07.768Z",
+    "modified": "2023-01-25T09:50:52.282Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"product\":\"63d0d68a6e9f0f183ea1aa50\",\n  \"rating\":3,\n  \"title\":\"Very nice refrigeratorsss\",\n  \"comment\":\"It was a nice product. Ill order again\"\n}",
+      "raw": "{\n  \"product\":\"63d0d68a6e9f0f183ea1aa50\",\n  \"rating\":2,\n  \"title\":\"Very nice product is this one\",\n  \"comment\":\"It was a nice product. Ill order again\"\n}",
       "form": []
     },
     "tests": []
