@@ -1,6 +1,6 @@
 ## Hosted Project
 
-[E-Commerce API Heroku URL](https://e-com-hnjm.onrender.com/)
+[API URL](https://e-com-hnjm.onrender.com/)
 
 #### Setup Basic Express Server
 
