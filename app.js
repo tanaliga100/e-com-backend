@@ -27,8 +27,7 @@ app.use(express.static("./public"));
 app.use(fileUpload());
 
 // ROUTES
-app.get("/api/v1", (req, res) => {
-  console.log("reqCookies", req.signedCookies);
+app.get("/", (req, res) => {
   res.send("e commerce-api");
 });
 
