@@ -75,5 +75,3 @@ const start = async () => {
 };
 // INVOKE_SERVER
 start();
-
-module.exports = app;
