@@ -41,8 +41,8 @@ require("express-async-errors");
 // TOP MIDDLEWARES
 app.use(express.json());
 
-if (process.env.NODE_ENV !== "production" ? app.use(morgan("tiny")) : null)
-  app.use(cookieParser(process.env.JWT_SECRET));
+app.use(morgan("tiny"));
+app.use(cookieParser(process.env.JWT_SECRET));
 app.use(express.static("./public"));
 app.use(fileUpload());
 
