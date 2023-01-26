@@ -1,9 +1,10 @@
-// IMPORT PACKAGE
+// NODE_PACKAGES
 const express = require("express");
 const connectDB = require("./db/connect");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
+
 // IMPORTS
 const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
@@ -13,11 +14,11 @@ const productsRouter = require("./routes/productRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
 const orderRouter = require("./routes/orderRoutes");
 
-// const authRouter2 = require("./routes/authRoutes2");
 // PACKAGE INSTANCE
 const app = express();
 require("dotenv").config();
 require("express-async-errors");
+
 // TOP MIDDLEWARES
 app.use(express.json());
 app.use(morgan("tiny"));
@@ -30,6 +31,7 @@ app.get("/api/v1", (req, res) => {
   console.log("reqCookies", req.signedCookies);
   res.send("e commerce-api");
 });
+
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/products", productsRouter);
@@ -39,6 +41,7 @@ app.use("/api/v1/orders", orderRouter);
 // BOTTOM MIDDLEWARES
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
+
 // SERVER INSTANCE
 const port = process.env.PORT || 5000;
 const start = async () => {
@@ -51,5 +54,5 @@ const start = async () => {
     console.log(console.log(error));
   }
 };
-
+// INVOKE_SERVER
 start();
