@@ -1,5 +1,6 @@
 // NODE_PACKAGES
 const express = require("express");
+const app = express();
 const connectDB = require("./db/connect");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
@@ -20,14 +21,6 @@ const reviewRouter = require("./routes/reviewRoutes");
 const orderRouter = require("./routes/orderRoutes");
 
 // SECURITY PACKAGES
-
-// PACKAGE INSTANCE
-const app = express();
-require("dotenv").config();
-require("express-async-errors");
-
-// TOP MIDDLEWARES
-app.use(express.json());
 app.set("trust proxy", 1);
 app.use(
   rateLimiter({
@@ -35,13 +28,21 @@ app.use(
     max: 60,
   })
 );
+
 app.use(helmet());
 app.use(cors());
 app.use(xss());
 app.use(mongoSanitize());
 
-app.use(morgan("tiny"));
-app.use(cookieParser(process.env.JWT_SECRET));
+// PACKAGE INSTANCE
+require("dotenv").config();
+require("express-async-errors");
+
+// TOP MIDDLEWARES
+app.use(express.json());
+
+if (process.env.NODE_ENV !== "production" ? app.use(morgan("tiny")) : null)
+  app.use(cookieParser(process.env.JWT_SECRET));
 app.use(express.static("./public"));
 app.use(fileUpload());
 

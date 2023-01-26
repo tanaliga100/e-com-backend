@@ -1,10 +1,11 @@
 {
-  "name": "06-jobs-api",
+  "name": "e-com",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
